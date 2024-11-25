@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movers and Packers</title>
+    <title>Mechanical Investor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,16 +11,20 @@
         }
         .center-text {
             text-align: center;
+            margin-bottom: 20px;
         }
-        .positions {
+        table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 20px;
         }
-        .positions ul {
-            list-style-type: none;
-            padding: 0;
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
         }
-        .positions li {
-            margin: 5px 0;
+        th {
+            background-color: #f4f4f4;
         }
         .new-position {
             font-style: italic;
@@ -30,25 +34,58 @@
 </head>
 <body>
 
-    <div class="positions">
-        <h2>Mechanical Investor</h2>
-        <h3>Positions</h3>
-        <ul>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM, PL<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, DHI<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS</li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD<span class="new-position">*</span>, CLS<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, DECK</li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOD, DECK<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, RIVN<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC<span class="new-position">*</span>, USLM<span class="new-position">*</span></li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC</li>
-            <li>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC, SMCI<span class="new-position">*</span>, STRL</li>
-        </ul>
-        <p><span class="new-position">*</span> New Position</p>
+    <div class="center-text">
+        <h1 id="currentDate">Loading date...</h1>
     </div>
+
+    <h2>Mechanical Investor</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM, PL</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, DHI</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS</td>
+                <td>Existing Position</td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Set the current date dynamically
+        function updateDate() {
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('currentDate').textContent = formattedDate;
+        }
+
+        updateDate();
+    </script>
 
 </body>
 </html>
