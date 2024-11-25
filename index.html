@@ -11,7 +11,6 @@
         }
         .center-text {
             text-align: center;
-            margin-bottom: 20px;
         }
         table {
             width: 100%;
@@ -35,11 +34,10 @@
 <body>
 
     <div class="center-text">
-        <h1 id="currentDate">Loading date...</h1>
+        <h1>Mechanical Investor</h1>
     </div>
 
-    <h2>Mechanical Investor</h2>
-
+    <h2>Positions</h2>
     <table>
         <thead>
             <tr>
@@ -68,24 +66,36 @@
                 <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN</td>
                 <td><span class="new-position">New Position</span></td>
             </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, DECK</td>
+                <td>Existing Position</td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOD, DECK</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, RIVN</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC, USLM</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC</td>
+                <td>Existing Position</td>
+            </tr>
+            <tr>
+                <td>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC, SMCI, STRL</td>
+                <td><span class="new-position">New Position</span></td>
+            </tr>
         </tbody>
     </table>
-
-    <script>
-        // Set the current date dynamically
-        function updateDate() {
-            const currentDate = new Date();
-            const formattedDate = currentDate.toLocaleDateString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            document.getElementById('currentDate').textContent = formattedDate;
-        }
-
-        updateDate();
-    </script>
 
 </body>
 </html>
