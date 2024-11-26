@@ -39,35 +39,47 @@
             padding: 0 15px;
         }
 
-        .positions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .top-stocks {
+            text-align: center;
+            margin: 20px 0;
         }
 
-        .position-card {
-            background: #252547;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .position-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .position-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.2em;
+        .top-stocks h2 {
+            font-size: 1.5em;
             color: #ffcc00;
         }
 
-        .position-card p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #ccc;
+        .top-stocks p {
+            font-size: 1.2em;
+            color: #f1f1f1;
+        }
+
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            gap: 5px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .stock-cell {
+            width: 30px;
+            height: 30px;
+            background-color: #252547;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #f1f1f1;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stock-cell:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .disclaimer {
@@ -89,59 +101,33 @@
     </header>
 
     <div class="container">
-        <h2>Positions</h2>
-        <div class="positions-grid">
-            <!-- Card for each stock position -->
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM, PL</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, USLM</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS, DHI</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN, TGLS</p>
-                <p>Status: <span style="color: yellow;">Existing Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS, HWKN</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, KD, CLS</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOG, DECK</p>
-                <p>Status: <span style="color: yellow;">Existing Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, GOOD, DECK</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, RIVN</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
-            <div class="position-card">
-                <h3>Stocks:</h3>
-                <p>NVDA, UBER, MSFT, SMH, GRMN, LIN, KD, IESC, USLM</p>
-                <p>Status: <span style="color: green;">New Position</span></p>
-            </div>
+        <div class="top-stocks">
+            <h2>Top Stocks</h2>
+            <p>NVDA, UBER, MSFT, SMH, GRMN, LIN</p>
+        </div>
+
+        <h2>All Stocks</h2>
+        <div class="stock-grid">
+            <!-- Stock cells -->
+            <div class="stock-cell">NVDA</div>
+            <div class="stock-cell">UBER</div>
+            <div class="stock-cell">MSFT</div>
+            <div class="stock-cell">SMH</div>
+            <div class="stock-cell">GRMN</div>
+            <div class="stock-cell">LIN</div>
+            <div class="stock-cell">GOOG</div>
+            <div class="stock-cell">KD</div>
+            <div class="stock-cell">CLS</div>
+            <div class="stock-cell">HWKN</div>
+            <div class="stock-cell">TGLS</div>
+            <div class="stock-cell">USLM</div>
+            <div class="stock-cell">PL</div>
+            <div class="stock-cell">DHI</div>
+            <div class="stock-cell">DECK</div>
+            <div class="stock-cell">RIVN</div>
+            <div class="stock-cell">IESC</div>
+            <div class="stock-cell">SMCI</div>
+            <div class="stock-cell">STRL</div>
         </div>
 
         <div class="disclaimer">
