@@ -34,37 +34,23 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 20px auto;
             padding: 0 15px;
-        }
-
-        .top-stocks {
             text-align: center;
-            margin: 20px 0;
-        }
-
-        .top-stocks h2 {
-            font-size: 1.5em;
-            color: #ffcc00;
-        }
-
-        .top-stocks p {
-            font-size: 1.2em;
-            color: #f1f1f1;
         }
 
         .stock-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 10px;
+            justify-content: center;
             margin: 20px auto;
-            max-width: 800px;
         }
 
         .stock-cell {
-            width: 30px;
-            height: 30px;
+            width: 60px; /* Half-inch in size */
+            height: 60px;
             background-color: #252547;
             display: flex;
             justify-content: center;
@@ -101,33 +87,20 @@
     </header>
 
     <div class="container">
-        <div class="top-stocks">
-            <h2>Top Stocks</h2>
-            <p>NVDA, UBER, MSFT, SMH, GRMN, LIN</p>
-        </div>
-
-        <h2>All Stocks</h2>
+        <h2>Stocks</h2>
         <div class="stock-grid">
             <!-- Stock cells -->
             <div class="stock-cell">NVDA</div>
-            <div class="stock-cell">UBER</div>
             <div class="stock-cell">MSFT</div>
             <div class="stock-cell">SMH</div>
             <div class="stock-cell">GRMN</div>
-            <div class="stock-cell">LIN</div>
-            <div class="stock-cell">GOOG</div>
             <div class="stock-cell">KD</div>
-            <div class="stock-cell">CLS</div>
-            <div class="stock-cell">HWKN</div>
-            <div class="stock-cell">TGLS</div>
             <div class="stock-cell">USLM</div>
-            <div class="stock-cell">PL</div>
-            <div class="stock-cell">DHI</div>
-            <div class="stock-cell">DECK</div>
-            <div class="stock-cell">RIVN</div>
+            <div class="stock-cell">TGLS</div>
+            <div class="stock-cell">CLS</div>
             <div class="stock-cell">IESC</div>
-            <div class="stock-cell">SMCI</div>
             <div class="stock-cell">STRL</div>
+            <div class="stock-cell">PL</div>
         </div>
 
         <div class="disclaimer">
