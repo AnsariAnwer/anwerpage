@@ -49,23 +49,44 @@
         }
 
         .stock-cell {
+            position: relative;
             width: 60px; /* Half-inch in size */
             height: 60px;
             background-color: #252547;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 0.8em;
+            font-size: 1.6em; /* Doubled the font size */
             font-weight: bold;
             color: #f1f1f1;
             border-radius: 4px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
         }
 
         .stock-cell:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .stock-cell:hover .tooltip {
+            display: block;
         }
 
         .disclaimer {
@@ -89,18 +110,40 @@
     <div class="container">
         <h2>Stocks</h2>
         <div class="stock-grid">
-            <!-- Stock cells -->
-            <div class="stock-cell">NVDA</div>
-            <div class="stock-cell">MSFT</div>
-            <div class="stock-cell">SMH</div>
-            <div class="stock-cell">GRMN</div>
-            <div class="stock-cell">KD</div>
-            <div class="stock-cell">USLM</div>
-            <div class="stock-cell">TGLS</div>
-            <div class="stock-cell">CLS</div>
-            <div class="stock-cell">IESC</div>
-            <div class="stock-cell">STRL</div>
-            <div class="stock-cell">PL</div>
+            <!-- Stock cells with descriptions -->
+            <div class="stock-cell">NVDA
+                <div class="tooltip">NVIDIA: Leading in AI and GPU technology.</div>
+            </div>
+            <div class="stock-cell">MSFT
+                <div class="tooltip">Microsoft: Global tech giant and cloud leader.</div>
+            </div>
+            <div class="stock-cell">SMH
+                <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
+            </div>
+            <div class="stock-cell">GRMN
+                <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
+            </div>
+            <div class="stock-cell">KD
+                <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
+            </div>
+            <div class="stock-cell">USLM
+                <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
+            </div>
+            <div class="stock-cell">TGLS
+                <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
+            </div>
+            <div class="stock-cell">CLS
+                <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
+            </div>
+            <div class="stock-cell">IESC
+                <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
+            </div>
+            <div class="stock-cell">STRL
+                <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
+            </div>
+            <div class="stock-cell">PL
+                <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
+            </div>
         </div>
 
         <div class="disclaimer">
