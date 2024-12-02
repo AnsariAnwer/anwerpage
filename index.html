@@ -1,171 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mechanical Investor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Website Sections</title>
     <style>
         body {
             margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #1e1e2f;
-            color: #f1f1f1;
-        }
-
-        .header {
-            background-color: #252547;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ffcc00;
-        }
-
-        .visitor-count {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #ccc;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
-            text-align: center;
-        }
-
-        .stock-grid {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            gap: 10px;
-            justify-content: center;
-            margin: 20px auto;
+            place-items: center;
+            height: 100vh;
         }
 
-        .stock-cell {
-            position: relative;
-            width: 60px; /* Half-inch in size */
-            height: 60px;
-            background-color: #252547;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.8em; /* Doubled the font size */
-            font-weight: bold;
-            color: #f1f1f1;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            height: 80%;
         }
 
-        .stock-cell:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .tooltip {
-            display: none;
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 0.8em;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-        }
-
-        .stock-cell:hover .tooltip {
-            display: block;
-        }
-
-        .disclaimer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #252547;
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             text-align: center;
-            font-size: 0.9em;
-            color: #bbb;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        .section p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.5;
         }
     </style>
 </head>
-
 <body>
-    <header class="header">
-        <h1>Mechanical Investor</h1>
-        <div class="visitor-count">Unique Visitors Today: <span id="visitorCount">Loading...</span></div>
-    </header>
-
-    <div class="container">
-        <h2>Stocks</h2>
-        <div class="stock-grid">
-            <!-- Stock cells with descriptions -->
-            <div class="stock-cell">NVDA
-                <div class="tooltip">NVIDIA: Leading in AI and GPU technology.</div>
-            </div>
-            <div class="stock-cell">MSFT
-                <div class="tooltip">Microsoft: Global tech giant and cloud leader.</div>
-            </div>
-            <div class="stock-cell">SMH
-                <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
-            </div>
-            <div class="stock-cell">GRMN
-                <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
-            </div>
-            <div class="stock-cell">KD
-                <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
-            </div>
-            <div class="stock-cell">USLM
-                <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
-            </div>
-            <div class="stock-cell">TGLS
-                <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
-            </div>
-            <div class="stock-cell">CLS
-                <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
-            </div>
-            <div class="stock-cell">IESC
-                <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
-            </div>
-            <div class="stock-cell">STRL
-                <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
-            </div>
-            <div class="stock-cell">PL
-                <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
-            </div>
+    <div class="grid">
+        <!-- Stock Section -->
+        <div class="section">
+            <h2>Stock</h2>
+            <p>Explore a curated list of stocks like NVDA, MSFT, SMH, and more. Click for tooltips and information.</p>
         </div>
 
-        <div class="disclaimer">
-            Remember, the stock market can be unpredictable. Always do your due diligence before investing!
+        <!-- Food Section -->
+        <div class="section">
+            <h2>Food</h2>
+            <p><strong>Sweet Potato & Lentil Bowl</strong></p>
+            <p>
+                - 1 cup red lentils, 1 medium sweet potato (cubed), 1/2 onion, 2 garlic cloves.  
+                - Sauté onion & garlic, add spices, lentils, sweet potato, and broth. Cook until soft.
+            </p>
+        </div>
+
+        <!-- Health Section -->
+        <div class="section">
+            <h2>Health</h2>
+            <p><strong>Health Tip:</strong> Stay hydrated! Drink at least 8 cups of water daily to boost energy, skin health, and overall well-being.</p>
+        </div>
+
+        <!-- Charity Section -->
+        <div class="section">
+            <h2>Charity</h2>
+            <p><strong>Charity Saying:</strong> *"Giving is not just about making a donation, it’s about making a difference."*</p>
         </div>
     </div>
-
-    <script>
-        // Fetch unique visitor count from the backend
-        async function fetchVisitorCount() {
-            try {
-                const response = await fetch('https://your-backend.com/api/visitor-count');
-                const data = await response.json();
-                document.getElementById('visitorCount').textContent = data.count;
-            } catch (error) {
-                console.error('Error fetching visitor count:', error);
-                document.getElementById('visitorCount').textContent = 'Error';
-            }
-        }
-
-        fetchVisitorCount();
-    </script>
 </body>
-
 </html>
