@@ -1,82 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Sections</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            display: grid;
-            place-items: center;
-            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #1e1e2f;
+            color: #f1f1f1;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            width: 80%;
-            height: 80%;
-        }
-
-        .section {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+        .header {
+            background-color: #252547;
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffcc00;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
             text-align: center;
         }
 
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #252547;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
         .section h2 {
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            color: #555;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #ffcc00;
         }
 
         .section p {
             font-size: 1em;
-            color: #666;
+            color: #ccc;
             line-height: 1.5;
+        }
+
+        .tooltip {
+            font-size: 0.9em;
+            color: #ccc;
         }
     </style>
 </head>
+
 <body>
-    <div class="grid">
-        <!-- Stock Section -->
+    <header class="header">
+        <h1>Website Sections</h1>
+    </header>
+
+    <div class="container">
+        <!-- Stocks Section -->
         <div class="section">
-            <h2>Stock</h2>
-            <p>Explore a curated list of stocks like NVDA, MSFT, SMH, and more. Click for tooltips and information.</p>
+            <h2>Stocks</h2>
+            <p>Explore stocks like NVDA, MSFT, and SMH with quick tooltips for insights.</p>
         </div>
 
         <!-- Food Section -->
         <div class="section">
             <h2>Food</h2>
-            <p><strong>Sweet Potato & Lentil Bowl</strong></p>
-            <p>
-                - 1 cup red lentils, 1 medium sweet potato (cubed), 1/2 onion, 2 garlic cloves.  
-                - Sauté onion & garlic, add spices, lentils, sweet potato, and broth. Cook until soft.
-            </p>
+            <p><strong>Recipe: Sweet Potato & Lentil Bowl</strong></p>
+            <p>- Ingredients: 1 cup red lentils, 1 medium sweet potato (cubed), 1/2 onion, 2 garlic cloves.<br>
+               - Instructions: Sauté onion and garlic, add spices, lentils, sweet potato, and broth. Simmer until soft.</p>
         </div>
 
         <!-- Health Section -->
         <div class="section">
             <h2>Health</h2>
-            <p><strong>Health Tip:</strong> Stay hydrated! Drink at least 8 cups of water daily to boost energy, skin health, and overall well-being.</p>
+            <p><strong>Health Tip:</strong> Stay hydrated! Drinking 8 cups of water daily boosts energy, focus, and skin health.</p>
         </div>
 
         <!-- Charity Section -->
         <div class="section">
             <h2>Charity</h2>
-            <p><strong>Charity Saying:</strong> *"Giving is not just about making a donation, it’s about making a difference."*</p>
+            <p><strong>Charity Saying:</strong> "Giving is not just about making a donation, it’s about making a difference."</p>
         </div>
     </div>
 </body>
+
 </html>
