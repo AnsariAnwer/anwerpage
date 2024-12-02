@@ -28,18 +28,20 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 0 15px;
-            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .section {
-            margin-top: 40px;
-            padding: 20px;
             background-color: #252547;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
         .section h2 {
@@ -54,9 +56,53 @@
             line-height: 1.5;
         }
 
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .stock-cell {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #f1f1f1;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .stock-cell:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
         .tooltip {
-            font-size: 0.9em;
-            color: #ccc;
+            display: none;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #444;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            border-radius: 4px;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .stock-cell:hover .tooltip {
+            display: block;
         }
     </style>
 </head>
@@ -70,7 +116,42 @@
         <!-- Stocks Section -->
         <div class="section">
             <h2>Stocks</h2>
-            <p>Explore stocks like NVDA, MSFT, and SMH with quick tooltips for insights.</p>
+            <div class="stock-grid">
+                <!-- Stock items -->
+                <div class="stock-cell">NVDA
+                    <div class="tooltip">NVIDIA: Leading in AI and GPU technology.</div>
+                </div>
+                <div class="stock-cell">MSFT
+                    <div class="tooltip">Microsoft: Global tech giant and cloud leader.</div>
+                </div>
+                <div class="stock-cell">SMH
+                    <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
+                </div>
+                <div class="stock-cell">GRMN
+                    <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
+                </div>
+                <div class="stock-cell">KD
+                    <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
+                </div>
+                <div class="stock-cell">USLM
+                    <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
+                </div>
+                <div class="stock-cell">TGLS
+                    <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
+                </div>
+                <div class="stock-cell">CLS
+                    <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
+                </div>
+                <div class="stock-cell">IESC
+                    <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
+                </div>
+                <div class="stock-cell">STRL
+                    <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
+                </div>
+                <div class="stock-cell">PL
+                    <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
+                </div>
+            </div>
         </div>
 
         <!-- Food Section -->
@@ -85,14 +166,4 @@
         <div class="section">
             <h2>Health</h2>
             <p><strong>Health Tip:</strong> Stay hydrated! Drinking 8 cups of water daily boosts energy, focus, and skin health.</p>
-        </div>
-
-        <!-- Charity Section -->
-        <div class="section">
-            <h2>Charity</h2>
-            <p><strong>Charity Saying:</strong> "Giving is not just about making a donation, it’s about making a difference."</p>
-        </div>
-    </div>
-</body>
-
-</html>
+        </
