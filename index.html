@@ -10,12 +10,12 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background-color: #1e1e2f;
+            background: linear-gradient(to right, #1e1e2f, #252547);
             color: #f1f1f1;
         }
 
         .header {
-            background-color: #252547;
+            background: linear-gradient(to bottom, #252547, #1e1e2f);
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -25,6 +25,16 @@
             margin: 0;
             font-size: 2.5em;
             color: #ffcc00;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+            }
         }
 
         .container {
@@ -32,74 +42,84 @@
             margin: 20px auto;
             padding: 0 15px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .section {
-            background-color: #252547;
+            background: linear-gradient(to bottom, #333, #252547);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
         }
 
         .section h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 15px;
             color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+            display: inline-block;
         }
 
         .section p {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #ccc;
-            line-height: 1.5;
+            line-height: 1.7;
         }
 
         .stock-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
             margin-top: 20px;
         }
 
         .stock-cell {
             position: relative;
-            width: 60px;
-            height: 60px;
-            background-color: #333;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(to bottom, #444, #333);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 0.8em;
+            font-size: 0.9em;
             font-weight: bold;
-            color: #f1f1f1;
-            border-radius: 4px;
+            color: #ffcc00;
+            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
         }
 
         .stock-cell:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, #ffcc00, #ff9900);
+            color: #fff;
         }
 
         .tooltip {
             display: none;
             position: absolute;
-            bottom: -40px;
+            bottom: -45px;
             left: 50%;
             transform: translateX(-50%);
             background-color: #444;
             color: #fff;
-            padding: 5px 10px;
-            font-size: 0.8em;
-            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            border-radius: 6px;
             white-space: nowrap;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            z-index: 10; /* Ensures tooltip is above all other elements */
+            z-index: 10;
         }
 
         .stock-cell:hover .tooltip {
@@ -118,7 +138,6 @@
         <div class="section">
             <h2>Stocks</h2>
             <div class="stock-grid">
-                <!-- Stock items -->
                 <div class="stock-cell">NVDA
                     <div class="tooltip">NVIDIA: Leading in AI and GPU technology.</div>
                 </div>
@@ -128,30 +147,7 @@
                 <div class="stock-cell">SMH
                     <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
                 </div>
-                <div class="stock-cell">GRMN
-                    <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
-                </div>
-                <div class="stock-cell">KD
-                    <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
-                </div>
-                <div class="stock-cell">USLM
-                    <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
-                </div>
-                <div class="stock-cell">TGLS
-                    <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
-                </div>
-                <div class="stock-cell">CLS
-                    <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
-                </div>
-                <div class="stock-cell">IESC
-                    <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
-                </div>
-                <div class="stock-cell">STRL
-                    <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
-                </div>
-                <div class="stock-cell">PL
-                    <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
-                </div>
+                <!-- Add more stock cells here -->
             </div>
         </div>
 
