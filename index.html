@@ -10,31 +10,21 @@
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(to right, #1e1e2f, #252547);
-            color: #f1f1f1;
+            background-color: #ffffff;
+            color: #333;
         }
 
         .header {
-            background: linear-gradient(to bottom, #252547, #1e1e2f);
+            background-color: #f8f9fa;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid #ddd;
         }
 
         .header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #ffcc00;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
-            }
-            100% {
-                text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-            }
+            color: #007bff;
         }
 
         .container {
@@ -47,36 +37,31 @@
         }
 
         .section {
-            background: linear-gradient(to bottom, #333, #252547);
+            background-color: #f9f9f9;
             padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .section h2 {
             font-size: 2em;
             margin-bottom: 15px;
-            color: #ffcc00;
-            border-bottom: 2px solid #ffcc00;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
             padding-bottom: 5px;
             display: inline-block;
         }
 
         .section p {
             font-size: 1.1em;
-            color: #ccc;
+            color: #555;
             line-height: 1.7;
         }
 
         .stock-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
             gap: 15px;
             justify-content: center;
             margin-top: 20px;
@@ -86,24 +71,23 @@
             position: relative;
             width: 70px;
             height: 70px;
-            background: linear-gradient(to bottom, #444, #333);
+            background-color: #007bff;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 0.9em;
             font-weight: bold;
-            color: #ffcc00;
+            color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
         }
 
         .stock-cell:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            background: linear-gradient(to bottom, #ffcc00, #ff9900);
-            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color: #0056b3;
         }
 
         .tooltip {
@@ -112,13 +96,13 @@
             bottom: -45px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #444;
+            background-color: #333;
             color: #fff;
             padding: 8px 12px;
             font-size: 0.9em;
             border-radius: 6px;
             white-space: nowrap;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
             z-index: 10;
         }
 
@@ -147,7 +131,30 @@
                 <div class="stock-cell">SMH
                     <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
                 </div>
-                <!-- Add more stock cells here -->
+                <div class="stock-cell">GRMN
+                    <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
+                </div>
+                <div class="stock-cell">KD
+                    <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
+                </div>
+                <div class="stock-cell">USLM
+                    <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
+                </div>
+                <div class="stock-cell">TGLS
+                    <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
+                </div>
+                <div class="stock-cell">CLS
+                    <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
+                </div>
+                <div class="stock-cell">IESC
+                    <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
+                </div>
+                <div class="stock-cell">STRL
+                    <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
+                </div>
+                <div class="stock-cell">PL
+                    <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
+                </div>
             </div>
         </div>
 
