@@ -32,8 +32,8 @@
             margin: 20px auto;
             padding: 0 15px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .section {
@@ -45,7 +45,7 @@
         }
 
         .section h2 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-bottom: 15px;
             color: #007bff;
             border-bottom: 2px solid #007bff;
@@ -54,60 +54,16 @@
         }
 
         .section p {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.5;
         }
 
-        .stock-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-            gap: 15px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .stock-cell {
-            position: relative;
-            width: 70px;
-            height: 70px;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.9em;
-            font-weight: bold;
-            color: #333;
-            border: 2px solid #333;
+        .section img {
+            width: 100%;
+            height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .stock-cell:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .tooltip {
-            display: none;
-            position: absolute;
-            bottom: -45px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #333;
-            color: #fff;
-            padding: 8px 12px;
-            font-size: 0.9em;
-            border-radius: 6px;
-            white-space: nowrap;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-            z-index: 10;
-        }
-
-        .stock-cell:hover .tooltip {
-            display: block;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -118,65 +74,58 @@
     </header>
 
     <div class="container">
-        <!-- Stocks Section -->
+        <!-- Block 1: Stocks -->
         <div class="section">
             <h2>Stocks</h2>
-            <div class="stock-grid">
-                <div class="stock-cell">NVDA
-                    <div class="tooltip">NVIDIA: Leading in AI and GPU technology.</div>
-                </div>
-                <div class="stock-cell">MSFT
-                    <div class="tooltip">Microsoft: Global tech giant and cloud leader.</div>
-                </div>
-                <div class="stock-cell">SMH
-                    <div class="tooltip">SMH: ETF tracking the semiconductor industry.</div>
-                </div>
-                <div class="stock-cell">GRMN
-                    <div class="tooltip">Garmin: Leader in GPS technology and wearables.</div>
-                </div>
-                <div class="stock-cell">KD
-                    <div class="tooltip">Kyndryl: IT infrastructure services provider.</div>
-                </div>
-                <div class="stock-cell">USLM
-                    <div class="tooltip">US Lime: Manufacturer of lime and limestone products.</div>
-                </div>
-                <div class="stock-cell">TGLS
-                    <div class="tooltip">Tecnoglass: Manufacturer of architectural glass.</div>
-                </div>
-                <div class="stock-cell">CLS
-                    <div class="tooltip">Celestica: Electronics manufacturing services provider.</div>
-                </div>
-                <div class="stock-cell">IESC
-                    <div class="tooltip">IES Holdings: Industrial services and solutions company.</div>
-                </div>
-                <div class="stock-cell">STRL
-                    <div class="tooltip">Sterling: Specializes in infrastructure construction.</div>
-                </div>
-                <div class="stock-cell">PL
-                    <div class="tooltip">Planet Labs: Provides satellite imagery and analytics.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Food Section -->
-        <div class="section">
-            <h2>Food</h2>
-            <p><strong>Recipe: Sweet Potato & Lentil Bowl</strong></p>
-            <p>- Ingredients: 1 cup red lentils, 1 medium sweet potato (cubed), 1/2 onion, 2 garlic cloves.<br>
-                - Instructions: Sauté onion and garlic, add spices, lentils, sweet potato, and broth. Simmer until soft.
+            <p>
+                NVDA, MSFT, SMH, GRMN, KD, USLM, TGLS, CLS, IESC, STRL, PL
             </p>
         </div>
 
-        <!-- Health Section -->
+        <!-- Block 2: Food -->
         <div class="section">
-            <h2>Health</h2>
-            <p><strong>Health Tip:</strong> Stay hydrated! Drinking 8 cups of water daily boosts energy, focus, and skin health.</p>
+            <h2>Food</h2>
+            <p><strong>Recipe: Scrambled Eggs</strong></p>
+            <p>- Ingredients: 3 eggs, 1 tbsp butter, salt, pepper.<br>
+                - Instructions: Whisk eggs, melt butter in a pan, cook eggs on low heat, stirring gently.
+            </p>
         </div>
 
-        <!-- Charity Section -->
+        <!-- Block 3: Health -->
+        <div class="section">
+            <h2>Health</h2>
+            <p><strong>Running Tip:</strong> Warm up with light stretching, run with proper form, and stay hydrated to improve endurance and prevent injuries.</p>
+        </div>
+
+        <!-- Block 4: Charity -->
         <div class="section">
             <h2>Charity</h2>
-            <p><strong>Charity Saying:</strong> "Giving is not just about making a donation, it’s about making a difference."</p>
+            <p><strong>Quote from Quran:</strong> *"The example of those who spend their wealth in the way of Allah is like a seed [of grain] which grows seven ears; in every ear there are a hundred grains."* (Quran 2:261)</p>
+        </div>
+
+        <!-- Block 5: Social Awareness -->
+        <div class="section">
+            <h2>Social Awareness</h2>
+            <p>Social awareness involves understanding and addressing societal issues. By empathizing with others and taking informed actions, we can foster inclusivity and bring about meaningful change.</p>
+        </div>
+
+        <!-- Block 6: Random -->
+        <div class="section">
+            <h2>Random</h2>
+            <p>Here’s a picture of sourdough bread:</p>
+            <img src="https://source.unsplash.com/featured/?sourdough,bread" alt="Sourdough Bread">
+        </div>
+
+        <!-- Block 7: Books -->
+        <div class="section">
+            <h2>Books</h2>
+            <p><strong>Book by Pulak Prasad:</strong> *"What I Learned About Investing from Darwin"*</p>
+        </div>
+
+        <!-- Block 8: TBD -->
+        <div class="section">
+            <h2>TBD</h2>
+            <p>Content coming soon...</p>
         </div>
     </div>
 </body>
